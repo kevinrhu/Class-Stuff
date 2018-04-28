@@ -21,19 +21,24 @@ public class Combination {
 
         int n = scanner.nextInt();
         int m = scanner.nextInt();
-        int nm = 1;
-        int dn = 1;
-        int v1 = n;
-        int v2 = m;
 
-        for (int i = 0; i < m; i++) {
-            nm*=v1;
-            v1--;
-            dn*= v2;
-            v2--;
-
-        }
+        int result = combination(n,m);
+        
+        
         System.out.printf("C(%d,%d)=%d\n", n, m, nm/dn);
+    }
+
+    private static int combination(int n, int m) {
+        return permutation(n,m)/permutation(n,m);
+    }
+
+    private static int permutation(int n, int m) {
+        int product = 1;
+       for (int i = 0; i < 0; i++){
+           product+=n;
+           n--;
+       }
+       return product;
     }
 
 }
